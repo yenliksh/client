@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #6D5D4B;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.main {
+  padding: 5rem;
+  display: flex; }
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(4, 18rem);
+  grid-column-gap: 10px;
+  border-top: 1px solid #aaa;
+  padding: 2rem;
+  width: fit-content; }
+  .columns__btn {
+    margin-left: 2rem; }
+
+.columns:last-child {
+  border-bottom: 1px solid #aaa; }
+
+.icon {
+  width: 10px; }
+
+.flex {
+  display: flex;
+  align-items: center; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  background-color: #B28451; }
+
+.mt-1 {
+  margin-top: 2rem; }
+
+.table {
+  width: fit-content; }
+
+.pagination {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1rem; }
+  .pagination__slider {
+    display: flex;
+    grid-column: 2/3;
+    justify-self: center;
+    align-items: center; }
+  .pagination__size {
+    justify-self: flex-end; }
+    .pagination__size__btn {
+      position: relative;
+      font-size: 1.3rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      padding: 5px; }
+      .pagination__size__btn:hover {
+        background-color: #B28451; }
+
+.numbers {
+  display: flex; }
+
+.active {
+  color: #c69963; }
+
+.filter {
+  margin-left: 5rem; }
+  .filter__item {
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #f9f7f6; }
+
+.number {
+  padding: 5px; }

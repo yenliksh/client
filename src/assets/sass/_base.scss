@@ -1,0 +1,158 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+$color-grey-light-3: #f0eeee;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+$color-grey-dark-3: #999;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.main{
+    padding: 5rem;
+    display: flex;
+}
+
+.columns{
+    display: grid;
+    grid-template-columns: repeat(4,18rem);
+    grid-column-gap: 10px;
+    border-top:1px solid $color-grey-light-2;
+    padding: 2rem;
+    width: fit-content;
+
+    &__btn{
+        margin-left:2rem;
+    }
+}
+
+.columns:last-child{
+    border-bottom:1px solid $color-grey-light-2;
+}
+
+.icon{
+    width: 10px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    &,
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 0;
+      transition: all 0.2s;
+      position: relative;
+      font-size: 1.8rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    &:hover{
+        background-color: $color-primary-dark;
+    }
+}
+
+.mt-1{
+    margin-top:2rem;
+}
+
+.table{
+    width: fit-content;
+}
+
+.pagination{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1rem;
+
+    &__slider{
+        display: flex;
+        grid-column: 2/3;
+        justify-self: center;
+        align-items: center;
+    }
+
+    &__size{
+        justify-self: flex-end;
+        &__btn{
+            position: relative;
+            font-size: 1.3rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 5px;
+
+            &:hover{
+                background-color: $color-primary-dark;
+            }
+        }
+    }
+}
+
+.numbers{
+   display: flex;
+}
+
+.active{
+    color: $color-primary;
+}
+
+.filter{
+    margin-left: 5rem;
+
+    &__item{
+        padding: 1rem;
+        margin-top: 1rem;
+        background-color: $color-grey-light-1;
+    }
+}
+
+.number{
+    padding: 5px;
+}
+
